@@ -1,0 +1,14 @@
+#basic line of code using print to type a simple message
+print('Hello World!')
+
+#variables can be inputed with or without the variable type
+a = 0
+print(a)
+
+#a variable can be modified at any point in the code
+a = 1
+print(a)
+
+#changing an integer into a string
+a = ('Hello World!')
+print(a)
