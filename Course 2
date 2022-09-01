@@ -1,0 +1,14 @@
+#integer which holds the user's age
+age = int(input('Enter your age: '))
+#sequence of conditions to determine what is printed based on the user's age
+if age >= 1 and age < 12:
+  print('You are a child of %d years' %age)
+elif age >= 12 and age < 18:
+  print('You are a teen of %d years' %age)
+elif age >= 18 and age < 30:
+  print('You are a young adult of %d years' %age)
+elif age >= 30 and ager <= 100:
+  print('You are an adult of %d years' %age)
+#final condition after all elifs are denied, giving no results
+else:
+  print('Value not found!')
