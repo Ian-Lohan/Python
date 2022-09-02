@@ -1,0 +1,63 @@
+#int to hold the counter's value
+counter = 0
+#function to add +1 to the counter up to 5
+while (counter < 5):
+  print(counter)
+  counter = counter + 1
+#prints a message after the end of the while loop
+else:
+  print('The loop was fully complete\n')
+
+#another counter but with simpler syntax
+x = 0
+while x < 10:
+  print(x)
+  x += 1
+#prints a message when the counter reaches 6
+  if x == 6:
+    print('X is equal to 6')
+#interrupts the counter, breaking the loop
+    break
+#prints a message after the while loop has ended
+else:
+  print('End of while loop')
+  
+ #creating a list and adding a variable then printing all the items
+names = ['Pedro', 'Joao', 'Leticia']
+for n in names:
+  print(n)
+#condition that tells the user that all names have been printed
+else:
+  print('All the names have been printed succesfully!')
+  
+#exercize asking for a score between 0 and 10 that keeps asking until a valid score is inputted
+score = float(input('Insert your score between 0 and 10: '))
+while (score < 0) or (score > 10):
+  score = float(input('Invalid score! Insert your score between 0 and 10: '))
+print('Your score is %d' %score)
+
+#exercize asking for an username and password that doesn't accept a password equal to an username, showing an error message and asking for new inputs
+username = input('Insert your username: ')
+password = input('Insert your password: ')
+while username == password:
+  print('Your password must be different than your username!')
+  password = input('Insert your password:')
+print('Approved!')
+
+#exercise that asks for a name with over 3 characters, age between 0 and 150, wage bigger than 0, sex either M or F and relationship between S, C, V or D
+name = input('Insert your name: ')
+while len(name) <= 3:
+  name = input('Your name must have more than 3 characters! Insert your name: ')
+age = int(input('Insert your age: '))
+while (age < 0) or (age > 150):
+  age = int(input('Your age must be between 0 and 150! Insert your age: '))
+wage = int(input('Insert your wage: '))
+while wage <= 0:
+  wage = int(input('Your wage must be bigger than 0! Insert your wage: '))
+sex = input('Insert your sex (M or F): ')
+while sex != 'M' and sex != 'F':
+  sex = input('Your sex must be either M or F! Insert your sex (M or F): ')
+relationship = input('Insert your relationship type (S/C/V/D): ')
+while relationship != 'S' and relationship != 'C' and relationship != 'V' and relationship != 'D':
+  relationship = input('Your relationship type must be either S, C, V or D! Insert your relationship type (S/C/V/D): ')
+print('Thank you %s!' %name) 
