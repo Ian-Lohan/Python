@@ -50,3 +50,46 @@ if with_adult == 'Y' or age >= 18:
   print('You can enter!')
 else:
   print('You can not enter')
+
+#here we create a list of disciplines and print it
+disciplines = ['EDA', 'PLP', 'DevWeb', 'EngSoft', 2022]
+print(disciplines)
+#now we print only the third value, since lists always start with [0]
+disciplines[2]
+
+#create a list with three values and print the second value, change the first value
+#use append to add a forth item, add a new item as the third value, remove the old second value
+#0
+fruits = ['apple', 'banana', 'cherry']
+#1
+print(fruits[1])
+#2
+fruits[0] = 'kiwi'
+print(fruits)
+#3
+fruits.append('orange')
+print(fruits)
+#4
+fruits.insert(1,'lemon')
+print(fruits)
+#5
+fruits.remove('banana')
+print(fruits)
+
+#here we create two lists then add the second list to the end of the first one
+list1 = ['a', 'b', 'c']
+list2 = [1, 2, 3]
+print(list1)
+print(list2)
+
+list1.extend(list2)
+print(list1)
+
+#another way to do it
+list1 = ['a', 'b', 'c']
+list2 = [1, 2, 3]
+
+for x in list2:
+  list1.append(x)
+
+print(list1)
