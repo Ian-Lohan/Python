@@ -1,0 +1,52 @@
+#here we create multiple variables within the same line of code and print them
+discipline1, discipline2, discipline3 = "EDA", "PLP", "DevWeb"
+print(discipline1)
+print(discipline2)
+print(discipline3)
+
+#here we create three variables and give them all the same value
+discipline1 = discipline2 = discipline3 = "PLP - Unifavip 2022"
+print(discipline1)
+print(discipline2)
+print(discipline3)
+#now we change the value of discipline2 without changing the other values
+discipline2 = "DevWeb - Unifavip 2022"
+print(discipline1)
+print(discipline2)
+print(discipline3)
+
+#here we create three variables with different types in the same line of code
+name, age, student = "Bruce", 30, True
+print(name)
+print(age)
+print(student)
+
+#prompt where the user inputs their university period and checks if they're a newcomer or not
+period = int(input('Type what period you are in: '))
+university = (input('Type the name of your university: '))
+
+if len(university) > 0 and period > 1:
+  print('You are a student in %s and not a newcomer anymore' %university)
+else:
+  print('You are not a student in %s or you are a newcomer' %university)
+
+#prompt that asks for the user's age and if they're in the company of an adult
+#if they're an adult or in company of an adult they can enter, if neither, they can't
+age = int(input('Type your age: '))
+if age >= 18:
+  print('Welcome!')
+else:
+  with_adult = (input('Are you being accompanied by an adult? (Y or N) '))
+  if with_adult == 'N':
+    print('You must be over 18 years old or accompanied by an adult to enter.')
+  else:
+    print('Welcome!')
+    
+ #the same code but simpler
+age = int(input('Type your age: '))
+with_adult = (input('Are you being accompanied by an adult? (Y or N) '))
+
+if with_adult == 'Y' or age >= 18:
+  print('You can enter!')
+else:
+  print('You can not enter')
