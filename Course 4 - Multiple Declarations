@@ -81,15 +81,64 @@ list1 = ['a', 'b', 'c']
 list2 = [1, 2, 3]
 print(list1)
 print(list2)
-
+#here we add the second list to the end of the first one with extend
 list1.extend(list2)
 print(list1)
 
 #another way to do it
 list1 = ['a', 'b', 'c']
 list2 = [1, 2, 3]
-
+#for x will run through all elements in the list
 for x in list2:
   list1.append(x)
 
 print(list1)
+
+#and another way to do it
+list1 = ['a', 'b', 'c']
+list2 = [1, 2, 3]
+#we can simply sum both lists together
+list3 = list1 + list2
+print(list3)
+
+#here we create a tuple, notice the ,
+disciplines = ['EDA',]
+print(type(disciplines))
+#here we create a string
+discipline = ['EDA']
+print(type(discipline))
+
+#create a tuple and print the third, forth and fifth items
+fruits = ('apple', 'banana', 'cherry', 'orange', 'strawberry', 'melon', 'mango')
+#[2:5] means we want to print the interval between 2 and 5
+print(fruits[2:5])
+
+#here we create a dictionary and print all it's values
+car = {
+    'brand': 'Ford',
+    'model': 'Mustang',
+    'year': 1964
+}
+print(car)
+
+#we cant have duplicated items in a dictionary
+car = {
+    'brand': 'Ford',
+    'model': 'Mustang',
+    'year': 1964,
+    'year': 2022
+}
+print(car)
+
+#we can add a list to a dictionary
+car = {
+    'brand': 'Ford',
+    'model': 'Mustang',
+    'year': 1964,
+    'colors': ['red', 'black', 'white']
+}
+print(car)
+
+Lists are ordered, mutable, organized and possesses methods (use [])
+Tuples are like lists, but immutable (use ())
+Dictionaries can't have duplicated items (use {})
