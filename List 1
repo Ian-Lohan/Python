@@ -192,3 +192,43 @@ if letter in vowels:
 else:
     print('The letter %s is a consonant.' % (letter))
 
+#write a program that asks for 2 grades then prints the average
+grade1 = float(input('Insert the first grade between 0 and 10: '))
+while grade1 < 0 or grade1 > 10:
+    print('Grade not accepted.')
+    grade1 = float(input('Insert the first grade between 0 and 10: '))
+    continue
+
+grade2 = float(input('Insert the second grade between 0 and 10: '))
+while grade2 < 0 or grade2 > 10:
+    print('Grade not accepted.')
+    grade2 = float(input('Insert the second grade between 0 and 10: '))
+    continue
+
+average = (grade1 + grade2) / 2
+
+print('Your average grade is %.2f' % (average))
+
+if average >= 7:
+    print('Approved!')
+elif average == 10:
+    print('VERY Approved!')
+else:
+    print('Not Approved!')
+
+#write a program that asks for 3 words, then prints the longest word and the number of characters in it
+word1 = input('Enter the first word: ')
+length1 = len(word1)
+word2 = input('Enter the second word: ')
+length2 = len(word2)
+word3 = input('Enter the third word: ')
+length3 = len(word3)
+
+if length1 > length2 and length3:
+    print('%s is the longest word, with %d characters' % (word1, length1))
+elif length2 > length1 and length3:
+    print('%s is the longest word, with %d characters' % (word2, length2))
+elif length3 > length1 and length2:
+    print('%s is the longest word, with %d characters' % (word3, length3))
+else:
+    print('Two or more words are the same length.')
