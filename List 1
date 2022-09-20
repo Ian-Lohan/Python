@@ -345,3 +345,76 @@ elif result == 3 or result == 4:
 elif result == 5:
     print('\nYou are the assassin!!!')
 
+
+
+#write a program to register the name, gender, height, weight, cpf of 3 people.
+#then locate the person with the cpf and print their imc
+person1 = []
+name1 = input('Input the first person name: ')
+gender1 = input('Input your gender (m/f): ')
+while gender1 not in ('M', 'm', 'F', 'f'):
+    print('You must be either M or F!')
+    gender1 = input('Input your gender (m/f): ')
+height1 = float(input('Input your height in meters: '))
+weight1 = float(input('Input your weight in kg: '))
+cpf1 = input('Input your CPF: ')
+while len(cpf1) != 11:
+    print('The CPF inputted is not 11 digits long!')
+    cpf1 = input('Input your CPF: ')
+imc1 = (weight1 / (height1 * height1))
+person1.append(name1)
+person1.append(gender1)
+person1.append(height1)
+person1.append(weight1)
+person1.append(cpf1)
+person1.append(imc1)
+person2 = []
+name2 = input('Input the second person name: ')
+gender2 = input('Input your gender (m/f): ')
+while gender2 not in ('M', 'm', 'F', 'f'):
+    print('You must be either M or F!')
+    gender2 = input('Input your gender (m/f): ')
+height2 = float(input('Input your height in meters: '))
+weight2 = float(input('Input your weight in kg: '))
+cpf2 = input('Input your CPF: ')
+while len(cpf2) != 11:
+    print('The CPF inputted is not 11 digits long!')
+    cpf2 = input('Input your CPF: ')
+imc2 = (weight2 / (height2 * height2))
+person2.append(name2)
+person2.append(gender2)
+person2.append(height2)
+person2.append(weight2)
+person2.append(cpf2)
+person2.append(imc2)
+person3 = []
+name3 = input('Input the third person name: ')
+gender3 = input('Input your gender (m/f): ')
+while gender3 not in ('M', 'm', 'F', 'f'):
+    print('You must be either M or F!')
+    gender3 = input('Input your gender (m/f): ')
+height3 = float(input('Input your height in meters: '))
+weight3 = float(input('Input your weight in kg: '))
+cpf3 = input('Input your CPF: ')
+while len(cpf3) != 11:
+    print('The CPF inputted is not 11 digits long!')
+    cpf3 = input('Input your CPF: ')
+imc3 = (weight3 / (height3 * height3))
+person3.append(name3)
+person3.append(gender3)
+person3.append(height3)
+person3.append(weight3)
+person3.append(cpf3)
+person3.append(imc3)
+call_cpf = input('Input a cpf to find a person: ')
+while len(call_cpf) != 11:
+    print('The CPF inputted is not 11 digits long!')
+    call_cpf = input('Input a cpf to find a person: ')
+if call_cpf in person1:
+    print('The CPF %s belongs to %s, and their IMC is %.2f' % (call_cpf, name1, imc1))
+elif call_cpf in person2:
+    print('The CPF %s belongs to %s, and their IMC is %.2f' % (call_cpf, name2, imc2))
+elif call_cpf in person3:
+    print('The CPF %s belongs to %s, and their IMC is %.2f' % (call_cpf, name3, imc3))
+else:
+    print('Could not find person.')
