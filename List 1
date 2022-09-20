@@ -89,7 +89,7 @@ if excess >= 1:
 else:
   print ('There`s no fine for you!')
   
- #write a program that asks how many hours a day and how many days in a month you work, then prints:
+#write a program that asks how many hours a day and how many days in a month you work, then prints:
 #the raw wage
 #how much you paid the IR (-11%)
 #how much you paid the INSS (-8%)
@@ -191,24 +191,19 @@ if letter in vowels:
     print('The letter %s is a vowel.' % (letter))
 else:
     print('The letter %s is a consonant.' % (letter))
-
 #write a program that asks for 2 grades then prints the average
 grade1 = float(input('Insert the first grade between 0 and 10: '))
 while grade1 < 0 or grade1 > 10:
     print('Grade not accepted.')
     grade1 = float(input('Insert the first grade between 0 and 10: '))
     continue
-
 grade2 = float(input('Insert the second grade between 0 and 10: '))
 while grade2 < 0 or grade2 > 10:
     print('Grade not accepted.')
     grade2 = float(input('Insert the second grade between 0 and 10: '))
     continue
-
 average = (grade1 + grade2) / 2
-
 print('Your average grade is %.2f' % (average))
-
 if average >= 7:
     print('Approved!')
 elif average == 10:
@@ -223,7 +218,6 @@ word2 = input('Enter the second word: ')
 length2 = len(word2)
 word3 = input('Enter the third word: ')
 length3 = len(word3)
-
 if length1 > length2 and length3:
     print('%s is the longest word, with %d characters' % (word1, length1))
 elif length2 > length1 and length3:
@@ -232,3 +226,29 @@ elif length3 > length1 and length2:
     print('%s is the longest word, with %d characters' % (word3, length3))
 else:
     print('Two or more words are the same length.')
+
+#write a program that asks for the price of 3 products, then recommends the cheapest one
+products = []
+product1 = float(input('Insert the price of the first product: '))
+products.append(product1)
+product2 = float(input('Insert the price of the second product: '))
+products.append(product2)
+product3 = float(input('Insert the price of the third product: '))
+products.append(product3)
+if min(products) == product1:
+    print('You should buy the first product for %.2f!' % (product1))
+elif min(products) == product2:
+    print('You should buy the second product for %.2f!' % (product2))
+elif min(products) == product3:
+    print('You should buy the third product for %.2f!' % (product3))
+    
+#write a program that asks for 3 numbers then prints them in descending order
+numbers = []
+number1 = int(input('Insert the first integer: '))
+numbers.append(number1)
+number2 = int(input('Insert the second interger: '))
+numbers.append(number2)
+number3 = int(input('Insert the third integer: '))
+numbers.append(number3)
+numbers.sort(reverse=True)
+print(numbers)
