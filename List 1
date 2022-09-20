@@ -167,18 +167,25 @@ if overlap >= 60.0:
   print('You got a score of %d, you are APPROVED!' % (overlap))
 else:
   print('You got a score of %d, you are NOT APPROVED!' % (overlap))
-  
- cities = []
+
+#write a program that asks for the name of 6 cities then prints the longest city name
+#the program asks if you want to extend the name of the city
+cities = []
 for i in range (0,6):
     inputs = input('Please insert the name of the %d city: ' % (i + 1))
-    if inputs not in cities:
-        cities.append(inputs)
-    else:
-        inputs = input('That name is already in the list. Please insert the name of the %d city: ' % (i + 1))
-        cities.append(inputs)
-print(cities)
-INCOMPLETE
+    if inputs in cities:
+        inputs = input('That name is already in the list. Please insert the name of the city: ')
+    cities.append(inputs)
+    answer = input('Would you like to extend the city name?(y/n) ')
+    if answer in ('Y', 'y'):
+        extra = input('Input the name extension: ')
+        cities[i] = cities[i] + extra
+        print(cities[i])
+print('The city names inputted are: ', *cities)
+longest = max(cities,key=len)
+print(longest,'is the longest city name!')
 
+#write a program that asks for a letter, then prints if it`s a vowel or consonant
 while True:
     letter = input('Enter a letter: ')
     if not letter.isalpha():
@@ -191,6 +198,7 @@ if letter in vowels:
     print('The letter %s is a vowel.' % (letter))
 else:
     print('The letter %s is a consonant.' % (letter))
+    
 #write a program that asks for 2 grades then prints the average
 grade1 = float(input('Insert the first grade between 0 and 10: '))
 while grade1 < 0 or grade1 > 10:
