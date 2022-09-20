@@ -269,4 +269,45 @@ elif turn == ('V' or 'v'):
 elif turn == ('N' or 'n'):
     print('Good Evening!')
 
+#write a program that asks for a salary and adjusts it based on the value
+#then prints the new salary and the changes
+salary = float(input('Insert the current salary: '))
+if salary < 280:
+    adjustment = 1.2
+    new_salary = salary * adjustment
+elif salary >= 280 and salary < 700:
+    adjustment = 1.15
+    new_salary = salary * adjustment
+elif salary >= 700 and salary < 1500:
+    adjustment = 1.1
+    new_salary = salary * adjustment
+elif salary >= 1500:
+    adjustment = 1.05
+    new_salary = salary * adjustment
+print('Old salary: %.2f, Adjustment Percentage: %.2f, Adjustment value: %.2f, New salary: %.2f' % (salary, adjustment, new_salary - salary, new_salary))
+
+#write a program that calculates the payment
+hour_value = float(input('Insert the value per hour: '))
+hours_month = float(input('Insert the amount of work hours per month: '))
+raw_salary = hour_value * hours_month
+if raw_salary <= 900:
+    ir_discount = 0
+elif raw_salary <= 1500:
+    ir_discount = 0.05
+elif raw_salary <= 2500:
+    ir_discount = 0.1
+elif raw_salary > 2500:
+    ir_discount = 0.2
+if raw_salary > 900:
+    ir_salary = (raw_salary * ir_discount)
+elif raw_salary <= 900:
+    ir_salary = 0
+inss = 1.1
+inss_salary = (raw_salary * inss) - raw_salary
+fgts = 1.11
+fgts_salary = (raw_salary * fgts) - raw_salary
+total_discount = inss_salary + ir_salary
+liquid_salary = raw_salary - total_discount
+print ('Raw Salary(%.2f * %.2f): %.2f\nIR(%.2f): %.2f\nINSS(%.2f): %.2f\nFGTS(%.2f): %.2f\nDiscount Total: %.2f\nLiquid Salary: %.2f' % (hour_value, hours_month, raw_salary, ir_discount, ir_salary, inss, inss_salary, fgts, fgts_salary, total_discount, liquid_salary))
+
 
