@@ -1,0 +1,90 @@
+class Car:
+  def __init__(self, model, accelerationMechanism):
+    self.__model =  model;
+    self.__speed = 0
+    self.__accelerationMechanism = accelerationMechanism
+
+  def accelerate(self):
+    accelerationMechanism.accelerate()
+
+  def brake(self):
+    return self.brake
+
+  def activateLights(self):
+    return self.activateLights
+
+  def getSpeed(self):
+    return self.speed
+
+  def __setSpeed(self):
+    return self.speed
+
+  def getModel(self):
+    return self.model
+
+  def getColor(self):
+    return self.color
+
+  def setColor(self, color):
+    self.color = color
+    
+==============================
+
+#the class inside () is the mother class of the class being defined
+class HondaFit(Car):
+  def __init__(self, accelerationMechanism):
+    model = 'Honda Fit'
+    #calls the builder of the mother class, in this case, the Car class
+    super().__init__(self, model, accelerationMechanism)
+    
+==============================
+
+class Automobile():
+  def accelerate(self):
+    raise NotImplementedError()
+  
+  def brake(self):
+    raise NotImplementedError()
+
+  def activateLights(self):
+    raise NotImplementedError()
+
+class Car(Automobile):
+
+   # . . .
+
+  def accelerate(self):
+    return self.accelerate
+
+  def brake(self):
+    return self.brake
+
+  def activateLights(self):
+    return self.activateLights
+
+  # . . .
+
+class Motorcycle(Automobile):
+
+  # . . .
+
+  def accelerate(self):
+    return self.accelerate
+
+  def brake(self):
+    return self.brake
+
+  def activateLights(self):
+    return self.activateLights
+
+  # . . .
+  
+==============================
+
+def main():
+  motorcycle = Motorcycle('Yamaha XPTO-100', AccelerationMechanismForMotorcycles())
+  car = Car('Honda Fit', AccelerationMechanismForCars())
+  listAutomobiles = [motorcycle, car]
+  for automobile in listAutomobiles:
+    automobile.accelerate()
+    automobile.activateLights()
