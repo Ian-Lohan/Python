@@ -1,0 +1,13 @@
+"""
+REVIEW FROM LAST COURSE
+object oriented programming has as it's main objective, arrange code in order to achieve faster execution
+and better organize it's functions by using multiple objects, methods and attributes
+an object is anything that possesses distinct methods and characteristics, they can also have a class
+classes are labels to classify an object, many objects can be of the same class, but no object is the exact same
+attributes are the characteristics of an object, methods are the funcions/actions of an object
+encapsulation is the act of limiting methods and attributes inside a class, so only it can access it
+inheritance is when a subclass can inherit the methods or attributes from it's mother class
+public = anyone can access, private = limited access to specified objects
+def is used to define a function, __init__ is usually used to initiate the first function in the object
+polimorphism is when child class inherits the name, methods and attributes of the mother class, being able to be modified
+"""
