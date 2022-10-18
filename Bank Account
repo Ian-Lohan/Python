@@ -1,0 +1,43 @@
+class acc:
+    def __init__(self,num,balance):
+        self.num = num
+        self.balance = balance
+    
+    def deposit(self,dep_amount):
+        self.balance += dep_amount
+        return self.balance
+
+    def withdraw(self,wit_amount):
+        self.balance -= wit_amount
+        return self.balance
+
+acc1 = acc(1,0)
+print("Welcome!")
+print(acc1.__dict__)
+choice = 1
+while choice != 0:
+    print("\n1.Deposit")
+    print("2.Withdraw")
+    print("0.Exit")
+    choice = int(input("\nEnter your choice: "))
+    if choice == 1:
+        dep_amount = int(input("\nEnter amount to deposit: "))
+        acc1.deposit(dep_amount)
+        print("\n")
+        print("%i deposited succesfully!" % (dep_amount))
+        print(acc1.__dict__)
+    elif choice == 2:
+        wit_amount = int(input("\nEnter amount to withdraw: "))
+        while (acc1.balance - wit_amount < 0):
+            print("You don't have this much money!!")
+            wit_amount = int(input("\nEnter amount to withdraw: "))
+        acc1.withdraw(wit_amount)
+        print("\n")
+        print("%i withdrawn succesfully!" % (wit_amount))
+        print(acc1.__dict__)
+    elif choice == 0:
+        print("\nThank You for using our System! Exiting.")
+    else:
+        print("\nInvalid choice!!")
+
+print()
