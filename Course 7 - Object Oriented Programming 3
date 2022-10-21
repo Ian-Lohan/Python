@@ -1,0 +1,138 @@
+class Person():
+  #attributes and methods of the class
+class PhysicalPerson():
+  #attributes and methods of the class
+  
+=====================================================
+
+class Person:
+  def __init__(self, name, gender, cpf):
+    #__init__ initializes the attributes of the instance
+    self.name = name
+    self.gender = gender
+    self.cpf = cpf
+    #self is used to refer to the same instance of the class
+
+#GET = returns, SET = sends/changes
+#object.attributeName = use the method for the object
+
+person1 = Person("João", "M", "123456")
+#we create the instance person1 using the Person class then give it the attributes João as name, M as gender and 123456 as cpf
+print(person1.name)
+#we print person1's name to test the instance of the class
+
+=====================================================
+
+class Person:
+  def __init__(self, name, gender, cpf, active):
+    #we could use attribute=value to declare the default value of an attribute, ex: active=True
+    self.name = name
+    self.gender = gender
+    self.cpf = cpf
+    self.active = active
+
+  def deactivate(self):
+    #here we create the method deactivate, that changes a person's active attribute to false
+    self.active = False
+    print("The person was deactivated successfully!")
+
+person1 = Person("Ian", "M", "123456", True)
+#here we declare the object person1 and give it the attributes
+print(person1.active)
+person1.deactivate()
+print(person1.active)
+#here we test the method deactivate on person1, then print to verify the change
+
+vars(person1)
+#we can use the function vars() to print all attributes of an object
+
+=====================================================
+
+class BankAccount:
+  def __init__(self, number, balance):
+    self.number = number
+    self.balance = balance
+  def debt(self, value):
+    self.balance = self.balance-value
+  def credit(self, value):
+    self.balance = self.balance+value
+
+c = BankAccount("123123123", 1000)
+c.debt(500)
+c.balance
+c.credit(4000)
+c.balance
+
+=====================================================
+
+class Calculator:
+  def __init__(self, x, y):
+    self.x = x
+    self.y = y
+  def sum (self):
+    value = self.x + self.y
+    print("The value of the sum: ", value)
+  def sub (self):
+    value = self.x - self.y
+    print("The value of the sub: ", value)
+  def mul (self):
+    value = self.x * self.y
+    print("The value of the mul: ", value)
+  def div (self):
+    value = self.x / self.y
+    print("The value of the div: ", value)
+    
+=====================================================
+
+#Heritage in when a class can inherits the attributes and methods of another class
+#The SUPERCLASS is the class that passes down its values, the SUBCLASS is the class that receives these values
+
+=====================================================
+
+class Employee():
+  #10% of wage
+  def __init__(self, name, cpf, wage):
+    self._name = name
+    self._cpf = cpf
+    self._wage = wage
+  def bonification(self):
+    return ((self._wage*0.10)+self._wage)
+
+class Manager(Employee):
+  #15% of wage
+  #here the Manager class is declared as a subclass of the Employee superclass
+  def __init__(self, name, cpf, wage, age, team):
+    #the subclass has two new values compared to its superclass
+    super().__init__(name, cpf, wage)
+    #the Manager class inherits the values name, cpf and wage from the superclass Employee
+    self.age = age
+    self.team = team
+  def bonification(self):
+    return ((self._wage*0.15)+self._wage)
+
+class Director(Employee):
+  #15% of wage
+  def __init__(self, name, cpf, wage, age, team):
+    super().__init__(name, cpf, wage)
+    self.age = age
+    self.team = team
+  def bonification(self):
+    return ((self._wage*0.15)+self._wage)
+
+class Secretary(Employee):
+  def __init__(self, name, cpf, wage, age, team):
+    super().__init__(name, cpf, wage)
+    self.age = age
+    self.team = team
+  def bonification(self):
+    return ((self._wage*0.15)+self._wage)
+
+class President(Employee):
+  def __init__(self, name, cpf, wage, age, team):
+    super().__init__(name, cpf, wage)
+    self.age = age
+    self.team = team
+  def bonification(self):
+    return ((self._wage*0.15)+self._wage)
+
+a = President("John", "123123", 500, 50, 2)
