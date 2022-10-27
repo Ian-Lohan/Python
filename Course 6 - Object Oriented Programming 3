@@ -136,3 +136,5 @@ class President(Employee):
     return ((self._wage*0.15)+self._wage)
 
 a = President("John", "123123", 500, 50, 2)
+a._wage
+a.bonification()
