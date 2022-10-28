@@ -1,0 +1,124 @@
+#Polimorphism is when the inherited method has different properties based on it's class, since it's implemented in the child class.
+
+class Animal:
+
+  def __init__(self):
+    pass
+
+  def locomotion(self):
+    pass
+  
+  #Here we create the Animal class with empty methods using pass, since they will be implemented individually.
+
+class Fish(Animal):
+
+  def locomotion(self):
+    print("The fish swims.")
+
+class Elephant(Animal):
+
+  def locomotion(self):
+    print("The elephant walks.")
+
+class Bird(Animal):
+
+  def locomotion(self):
+    print("The bird flies.")
+  
+  #Here we create 3 subclasses, each with a different implementation of the locomotion method.
+
+fish = Fish()
+elephant = Elephant()
+bird = Bird()
+
+#Here we create 3 instances, with one object for each subclass.
+
+fish.locomotion()
+elephant.locomotion()
+bird.locomotion()
+
+#Here we use the locomotion method and see the different results based on subclass.
+
+============================================================
+
+#Overriding is when the subclass defines a method with the same name, same return and same parameters as it's superclass's method.
+#By doing this the the redefined method substitutes the previous method starting with the subclass.
+#Overloading is when two methods of the same name, have different parameters, this way they don't have the same signature.
+#Dynamic Binding is we connect the signatures of the method and the method defined by the signature.
+
+============================================================
+
+class Worker():
+
+  def __init__(self, name = "worker", wage = 0):
+    self.name = name
+    self.wage = wage
+
+  def setName(self, name):
+    name = input("Insert name: ")
+
+  def getName():
+    return self.name
+  
+  def setWage(self, wage):
+    wage = int(input("Insert wage: "))
+
+  def getWage(self, wage):
+    return self.wage
+  
+  def raiseSalary(self, wage):
+    return ((self.wage*0.05)+self.wage)
+
+class Manager(Worker):
+
+  def raiseSalary(self, wage):
+    return ((self.wage*0.10)+self.wage)
+
+class Programmer(Worker):
+
+  def raiseSalary(self, wage):
+    return ((self.wage*0.20)+self.wage)
+
+class Analyst(Worker):
+  pass
+
+w1 = Worker()
+w2 = Worker()
+w3 = Worker()
+m = Manager()
+p = Programmer()
+a = Analyst()
+
+choice = input("Choose between M - Manager, P - Programmer, and A - Analyst: ")
+
+============================================================
+
+#Encapsulation is when you restrict the access to a variable by giving it access rules, such as limiting which classes can access it
+#A public variable means any class can access the variable
+#A protected variable means only a handful of classes can access it, we use one underline _
+#A private variable means only the class itself can access it, we use two underlines __
+
+class Encapsulation:
+  def __init__(self, a, b, c):
+    self.public = a
+    self._protected = b
+    self.__private = c
+
+  def method_public(self):
+    print("public")
+
+  def _method_protected(self):
+    print("protected")
+
+  def __method_private(self):
+    print("private")
+
+Encapsulation = Encapsulation(1, 2, 3)
+
+Encapsulation.method_public()
+Encapsulation._method_protected()
+Encapsulation.__method_private()
+
+============================================================
+
+#getters are used to return a value, setters are used to change a value
