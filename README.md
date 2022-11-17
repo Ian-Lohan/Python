@@ -1,2 +1,2 @@
 # Python
-Python codes learned during a python course in university
+Some Python codes I learned during my Python course in university
