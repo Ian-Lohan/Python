@@ -1,0 +1,75 @@
+NOTAS DE ALUNOS
+Toral de Alunos = 1044
+Ruim = 230 (22% das notas)
+OK = 610 (58% das notas)
+Bom = 204 (19% das notas)
+
+NAMORO
+Ruim, Nao = 132 (57% das notas ruins)
+Ruim, Sim = 98 (42% das notas ruins)
+OK, Nao = 404 (66% das notas oks)
+OK, Sim = 206 (33% das notas oks)
+Bom, Nao = 137 (67% das notas boas)
+Bom, Sim = 67 (32% das notas boas)
+
+ALCOOL
+Ruim, 1 = 78 (34%)
+Ruim, 2 = 46 (20%)
+Ruim, 3 = 48 (20%)
+Ruim, 4 = 36 (15%)
+Ruim, 5 = 22 (9%)
+OK, 1 = 223 (36%)
+OK, 2 = 143 (23%)
+OK, 3 = 113 (18%)
+OK, 4 = 89 (14%)
+OK, 5 = 42 (7%)
+Bom, 1 = 97 (47%)
+Bom, 2 = 46 (22%)
+Bom, 3 = 39 (19%)
+Bom, 4 = 13 (6%)
+Bom, 5 = 9 (4%)
+Consumo 1 = 398 (38%)
+Consumo 2 = 235 (22%)
+Consumo 3 = 200 (19%)
+Consumo 4 = 138 (13%)
+Consumo 5 = 73 (7%)
+
+EDUCAÇÃO PAI (BOM)
+Edu 0 = 2 (1%)
+Edu 1 = 31 (15%)
+Edu 2 = 63 (31%)
+Edu 3 = 45 (22%)
+Edu 4 = 63 (31%)
+
+EDUCAÇÃO PAI (RUIM)
+Edu 0 = 0 (0%) 
+Edu 1 = 80 (34%)
+Edu 2 = 69 (30%)
+Edu 3 = 43 (18%)
+Edu 4 = 38 (16%)
+
+EDUCAÇÃO MAE (BOM)
+Edu 0 = 3 (1%)
+Edu 1 = 16 (8%)
+Edu 2 = 40 (19%)
+Edu 3 = 50 (24%)
+Edu 4 = 95 (46%)
+
+EDUCAÇÃO MAE (RUIM)
+Edu 0 = 1 (1%)
+Edu 1 = 62 (27%)
+Edu 2 = 63 (27%)
+Edu 3 = 57 (24%)
+Edu 4 = 47 (20%)
+
+ESCOLA
+GP = 772 (74%)
+MS = 272 (26%)
+GP Ruim = 145 (18%)
+MS Ruim = 85 (31%)
+GP OK = 460 (59%)
+MS OK = 150 (55%)
+GP Bom = 167 (21%)
+MS Bom = 37 (13%)
+
+RELACIONAMENTO FAMILIAR
