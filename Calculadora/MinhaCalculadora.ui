@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MinhaCalculadora</class>
+ <widget class="QWidget" name="MinhaCalculadora">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>639</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>400</width>
+    <height>639</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>400</width>
+    <height>639</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Minha Caculadora</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="resource.qrc">
+    <normaloff>:/newPrefix/icone.png</normaloff>:/newPrefix/icone.png</iconset>
+  </property>
+  <widget class="QPushButton" name="dividir">
+   <property name="geometry">
+    <rect>
+     <x>295</x>
+     <y>202</y>
+     <width>93</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton#dividir {
+background-color:rgb(255, 232, 147);
+font-family: &quot;Oswald&quot;;
+font-size: 20px;
+font-weight: bold;
+}</string>
+   </property>
+   <property name="text">
+    <string>/</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="somar">
+   <property name="geometry">
+    <rect>
+     <x>295</x>
+     <y>460</y>
+     <width>93</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton#somar {
+background-color:rgb(255, 232, 147);
+font-family: &quot;Oswald&quot;;
+font-size: 20px;
+font-weight: bold;
+}</string>
+   </property>
+   <property name="text">
+    <string>+</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="p4">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>374</y>
+     <width>93</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton#p4 {
+background-color:rgb(239, 239, 239);
+font-family: &quot;Oswald&quot;;
+font-size: 20px;
+font-weight: bold;
+}</string>
+   </property>
+   <property name="text">
+    <string>4</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="p8">
+   <property name="geometry">
+    <rect>
+     <x>104</x>
+     <y>288</y>
+     <width>94</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton#p8 {
+background-color:rgb(239, 239, 239);
+font-family: &quot;Oswald&quot;;
+font-size: 20px;
+font-weight: bold;
+}</string>
+   </property>
+   <property name="text">
+    <string>8</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="p5">
+   <property name="geometry">
+    <rect>
+     <x>104</x>
+     <y>374</y>
+     <width>94</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton#p5 {
+background-color:rgb(239, 239, 239);
+font-family: &quot;Oswald&quot;;
+font-size: 20px;
+font-weight: bold;
+}</string>
+   </property>
+   <property name="text">
+    <string>5</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="visor">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>72</y>
+     <width>381</width>
+     <height>121</height>
+    </rect>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel#visor {
+font-size: 80px;
+background-color: rgb(230, 230, 230);
+border: 1px solid rgb(158, 158, 158);
+}</string>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+   <property name="indent">
+    <number>-1</number>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="subtrair">
+   <property name="geometry">
+    <rect>
+     <x>295</x>
+     <y>374</y>
+     <width>93</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton#subtrair {
+background-color:rgb(255, 232, 147);
+font-family: &quot;Oswald&quot;;
+font-size: 20px;
+font-weight: bold;
+}</string>
+   </property>
+   <property name="text">
+    <string>-</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="clear">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>202</y>
+     <width>284</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>16777215</width>
+     <height>16777215</height>
+    </size>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton#clear {
+background-color:rgb(239, 239, 239);
+font-family: &quot;Oswald&quot;;
+font-size: 20px;
+font-weight: bold;
+}</string>
+   </property>
+   <property name="text">
+    <string>C</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="p9">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>288</y>
+     <width>93</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton#p9 {
+background-color:rgb(239, 239, 239);
+font-family: &quot;Oswald&quot;;
+font-size: 20px;
+font-weight: bold;
+}</string>
+   </property>
+   <property name="text">
+    <string>9</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="p3">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>460</y>
+     <width>93</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton#p3 {
+background-color:rgb(239, 239, 239);
+font-family: &quot;Oswald&quot;;
+font-size: 20px;
+font-weight: bold;
+}</string>
+   </property>
+   <property name="text">
+    <string>3</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="p7">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>288</y>
+     <width>93</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton#p7 {
+background-color:rgb(239, 239, 239);
+font-family: &quot;Oswald&quot;;
+font-size: 20px;
+font-weight: bold;
+}</string>
+   </property>
+   <property name="text">
+    <string>7</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="multiplicar">
+   <property name="geometry">
+    <rect>
+     <x>295</x>
+     <y>288</y>
+     <width>93</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton#multiplicar {
+background-color:rgb(255, 232, 147);
+font-family: &quot;Oswald&quot;;
+font-size: 20px;
+font-weight: bold;
+}</string>
+   </property>
+   <property name="text">
+    <string>X</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="p0">
+   <property name="geometry">
+    <rect>
+     <x>113</x>
+     <y>552</y>
+     <width>171</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton#p0 {
+background-color:rgb(239, 239, 239);
+font-family: &quot;Oswald&quot;;
+font-size: 20px;
+font-weight: bold;
+}</string>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="p6">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>374</y>
+     <width>93</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton#p6 {
+background-color:rgb(239, 239, 239);
+font-family: &quot;Oswald&quot;;
+font-size: 20px;
+font-weight: bold;
+}</string>
+   </property>
+   <property name="text">
+    <string>6</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="igual">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>552</y>
+     <width>101</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton#igual {
+background-color:rgb(148, 255, 169);
+font-family: &quot;Oswald&quot;;
+font-size: 20px;
+font-weight: bold;
+}</string>
+   </property>
+   <property name="text">
+    <string>=</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="p2">
+   <property name="geometry">
+    <rect>
+     <x>104</x>
+     <y>460</y>
+     <width>94</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton#p2 {
+background-color:rgb(239, 239, 239);
+font-family: &quot;Oswald&quot;;
+font-size: 20px;
+font-weight: bold;
+}</string>
+   </property>
+   <property name="text">
+    <string>2</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="p1">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>460</y>
+     <width>93</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton#p1 {
+background-color:rgb(239, 239, 239);
+font-family: &quot;Oswald&quot;;
+font-size: 20px;
+font-weight: bold;
+}</string>
+   </property>
+   <property name="text">
+    <string>1</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="ponto">
+   <property name="geometry">
+    <rect>
+     <x>12</x>
+     <y>552</y>
+     <width>91</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton#ponto {
+background-color:rgb(239, 239, 239);
+font-family: &quot;Oswald&quot;;
+font-size: 20px;
+font-weight: bold;
+}</string>
+   </property>
+   <property name="text">
+    <string>•</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="visor_2">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>10</y>
+     <width>381</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel#visor_2 {
+font-size: 40px;
+background-color: rgb(230, 230, 230);
+border: 1px solid rgb(158, 158, 158);
+border-bottom: none;
+}</string>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+   <property name="indent">
+    <number>-1</number>
+   </property>
+  </widget>
+  <zorder>dividir</zorder>
+  <zorder>somar</zorder>
+  <zorder>p4</zorder>
+  <zorder>p8</zorder>
+  <zorder>p5</zorder>
+  <zorder>subtrair</zorder>
+  <zorder>clear</zorder>
+  <zorder>p9</zorder>
+  <zorder>p3</zorder>
+  <zorder>p7</zorder>
+  <zorder>multiplicar</zorder>
+  <zorder>p0</zorder>
+  <zorder>p6</zorder>
+  <zorder>igual</zorder>
+  <zorder>p2</zorder>
+  <zorder>p1</zorder>
+  <zorder>ponto</zorder>
+  <zorder>visor</zorder>
+  <zorder>visor_2</zorder>
+ </widget>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
+ <connections/>
+</ui>
